@@ -104,7 +104,7 @@ body {
 }
 
 .equal:hover{
-    animation: bling .4s infinite linear;
+    animation: bling .8s infinite linear;
 }
 @keyframes bling{
     0%{

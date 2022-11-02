@@ -1,6 +1,6 @@
 let result = document.querySelector(".count-result");
 let process = document.querySelector(".count-text");
-let ans = ''; //大畫面數字
+let ans = '0'; //大畫面數字
 let ans2 = ''; //小畫面數字
 let answer = 0;
 let operator ;
@@ -26,16 +26,16 @@ for(let i=0; i<count.length; i++){
 ac.addEventListener("click", clear);
 
 function change(e){
-    if(ans2==``){
+    if(ans2==''){
 
         ans2 = ans;
-        ans = ``;
+        ans = '';
         operator = e.target.innerHTML;
         display();
         process.innerHTML = ans2 + operator;
     }else{
         operatorAns();
-        ans2 = ``;
+        ans2 = '';
         change(e);
     }
 }
@@ -48,7 +48,7 @@ function display(){
     }
 
     
-    if(ans==``|| ans==`undefined`){
+    if(ans==''|| ans==`undefined`){
         ans = `0`;
     }//如果ans空值或找不到，補0
     result.innerHTML = thousand(ans);
@@ -62,11 +62,11 @@ function display(){
 }
 
 function clear(){
-    process.innerHTML = ``;
-    result.innerHTML = `0`;
-    ans = ``;
-    ans2 = ``;
-    operator = ``;
+    process.innerHTML = '';
+    result.innerHTML = '0';
+    ans = '0';
+    ans2 = '';
+    operator = '';
 }
 
 back.onclick = () => {
@@ -77,7 +77,7 @@ back.onclick = () => {
 }
 equal.addEventListener("click",operatorAns);
 function operatorAns(){
-    if(!ans2==``){
+    if(!ans2==''){
         ans = parseFloat(ans);
         ans2 = parseFloat(ans2);
         switch(operator){
@@ -98,8 +98,8 @@ function operatorAns(){
                 break;
         }
     
-        ans2 = ``;
-        process.innerHTML = ``;
+        ans2 = '';
+        process.innerHTML = '';
         ans = ans.toString()
         display();
     }
