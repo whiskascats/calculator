@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #E8E8E8;
+}
+
+#cal-body {
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #062145;
+    border-radius: 20px;
+}
+
+.count-text {
+    width: 100%;
+    min-height: 40px;
+    padding: 16px 20px 0;
+    box-sizing: border-box;
+    background-color: #041936;
+    color: #00C4FF;
+    text-align: right;
+    border-radius: 20px 20px 0 0;
+    word-break: break-all;
+}
+
+.count-result {
+    width: 100%;
+    min-height: 70px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    background-color: #041936;
+    color: #fff;
+    font-size: 56px;
+    text-align: right;
+    word-break: break-all;
+}
+
+.btn-area {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn-num {
+    width: 264px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+
+
+.btn {
+    width: 72px;
+    height: 64px;
+    color: #fff;
+    font-size: 24px;
+    line-height: 64px;
+    text-align: center;
+    border-radius: 16px;
+    margin: 7px;
+    cursor: pointer;
+}
+.btn-count .btn{
+    background-color: #041936;
+}
+.btn-func .btn {
+    color: #00C4FF;
+}
+
+.equal {
+    width: 165px;
+    padding: 18px 30px;
+    box-sizing: border-box;
+    text-align: right;
+    line-height: 30px;
+    color: #fff;
+    /* background: transparent linear-gradient(90deg, #00C4FF 0%, #6C00FF 100%) 0% 0% padding-box; */
+    background: linear-gradient(90deg, #00C4FF 0%, #6C00FF 100%);
+    
+}
+
+.btn-count {
+    width: 86px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.btn-func {
+    width: 100%;
+    display: flex;
+}
+
+.btn:hover{
+    background-color: #888;
+}
+
+.equal:hover{
+    animation: bling .4s infinite linear;
+}
+@keyframes bling{
+    0%{
+        background: linear-gradient(90deg, #00C4FF 0%, #6C00FF 100%);
+    }
+    25%{
+        background: linear-gradient(90deg, #6C00FF 0%, #00C4FF 25%, #6C00FF 100%);
+    }
+    50%{
+        background: linear-gradient(90deg, #6C00FF 0%, #00C4FF 50%, #6C00FF 100%);
+        color: #6C00FF;
+    }
+    75%{
+        background: linear-gradient(90deg, #6C00FF 0%, #00C4FF 75%, #6C00FF 100%);
+        color: #6C00FF;
+    }
+    100%{
+        background: linear-gradient(-90deg, #00C4FF 0%, #6C00FF 100%);
+        color: #6C00FF;
+    }
+}
